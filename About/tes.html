@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peta</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <!-- CSS eksternal -->
+  <link rel="stylesheet" href="../css/tes.css">
+</head>
+<body>
+
+  <!-- Header/Navbar -->
+  <header class="header">
+    <div class="logo">
+      <h2>Kelok Ijen</h2>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./profil.html">Profil</a></li>
+        <li><a href="./peta.html">Peta</a></li>
+        <li><a href="./berita.html">Berita</a></li>
+        <li><a href="./arsip.html">Arsip</a></li>
+        <li><a href="./login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <div class="search-box">
+       <input type="text" id="search" placeholder="Cari daerah..." />
+         <button id="btn">🔍</button>
+    </div>
+
+    <div class="section">
+      <h3>Basemap</h3>
+      <label><input type="radio" name="basemap" value="satelit" checked> Satelit</label>
+      <label><input type="radio" name="basemap" value="osm"> OpenStreetMap</label>
+    </div>
+    <div class="section">
+      <h3>Layer</h3>
+      <label><input type="checkbox" id="persilCheck" checked> Persil Rumah</label>
+      <label><input type="checkbox" id="krbCheck" checked> KRB</label>
+      <label><input type="checkbox" id="kearifanCheck" checked> Kearifan Lokal</label>
+      <label><input type="checkbox" id="tempatCheck"> Tempat Evakuasi</label>
+      <label><input type="checkbox" id="jalurCheck"> Jalur Evakuasi</label>
+    </div>
+  </div>
+
+  <!-- Map -->
+  <div id="map"></div>
+
+  <!-- Kotak Pencarian -->
+  <div class="search-box">
+    <input type="text" id="search" placeholder="Cari daerah..." />
+    <button id="btn">🔍</button>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <!-- JS eksternal -->
+  <script src="../js/tes.js"></script>
+</body>
+</html>

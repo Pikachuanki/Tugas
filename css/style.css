@@ -1,0 +1,182 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Background dengan overlay transparan */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/DJI_0937.JPG") no-repeat center center/cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* Header */
+.header {
+  background-color: #064635;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo h2 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Navbar */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #a3d9a5;
+}
+
+/* Isi Halaman */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+main img {
+  width: 160px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+main h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #064635;
+}
+
+main p.slogan {
+  font-size: 1.8rem;
+  font-style: italic;
+  color: #064635;
+}
+
+/* Tombol Hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+/* Animasi X */
+.menu-toggle.active {
+  transform: rotate(90deg);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  main h1 {
+    font-size: 2.8rem;
+  }
+
+  main p.slogan {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+    background-color: #064635;
+    text-align: center;
+  }
+
+  .navbar ul li {
+    padding: 10px 0;
+  }
+
+  main img {
+    width: 120px;
+  }
+
+  main h1 {
+    font-size: 2.2rem;
+  }
+
+  main p.slogan {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 10px 15px;
+  }
+
+  .header .logo h2 {
+    font-size: 1.2rem;
+  }
+
+  main h1 {
+    font-size: 1.8rem;
+  }
+
+  main p.slogan {
+    font-size: 1rem;
+  }
+}

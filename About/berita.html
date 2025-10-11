@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berita - Kelok Ijen</title>
+  <link rel="stylesheet" href="../css/berita.css">
+</head>
+<body>
+  <!-- Header/Navbar -->
+  <header class="header">
+    <div class="logo">Kelok Ijen</div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav class="navbar" id="navbar">
+      <a href="../index.html">Home</a>
+      <a href="profil.html">Profil</a>
+      <a href="peta.html">Peta</a>
+      <a href="berita.html">Berita</a>
+      <a href="arsip.html">Arsip</a>
+      <a href="login.html">Login</a>
+    </nav>
+    <div class="search-box">
+      <input type="text" placeholder="Cari berita...">
+      <button id="searchBtn">Cari</button>
+    </div>
+  </header>
+
+  <!-- Judul Halaman -->
+  <section class="page-title">
+    <h1>Berita Terkini</h1>
+    <p>Informasi terbaru seputar Gunung Ijen dan sekitarnya</p>
+  </section>
+
+  <!-- Filter Kategori -->
+  <div class="filter-bar">
+    <button class="filter-btn" data-filter="all">Semua</button>
+    <button class="filter-btn" data-filter="lingkungan">Lingkungan</button>
+    <button class="filter-btn" data-filter="bencana">Bencana</button>
+    <button class="filter-btn" data-filter="pariwisata">Pariwisata</button>
+    <button class="filter-btn" data-filter="desa">Kegiatan Desa</button>
+    <button class="filter-btn" data-filter="pendidikan">Pendidikan</button>
+  </div>
+
+  <!-- Konten Berita -->
+  <section class="news-container">
+    <div class="news-card" data-category="pendidikan">
+      <img src="../img/PKM.jpg" alt="Berita 1">
+      <div class="content">
+        <h3>Muda, Tangguh, dan Berdampak: TIM PKM-RSH PWK UNEJ Siap Teliti Koherensi Kerentanan Sosial dengan Kearifan Lokal di KRB Gunung Ijen</h3>
+        <div class="meta">02 Juli 2025 | Admin</div>
+        <p>Gunung Ijen tidak hanya memesona dengan api biru dan danau toskanya, tetapi juga menyimpan potensi bencana. Tim PKM-RSH PWK UNEJ hadir dengan penelitian sosio-spasial untuk melihat bagaimana kearifan lokal mampu memperkuat ketangguhan masyarakat di Kawasan Rawan Bencana.</p>
+        <a href="detail-berita1.html">Baca Selengkapnya</a>
+      </div>
+
+      <div class="news-card" data-category="desa"></div>
+      <img src="../img/Kantor Desa Kalianyar.jpg" alt="Berita 2">
+      <div class="content">
+        <h3>Tim PKM Sowan ke Kantor Desa Kalianyar: Awal Langkah Penelitian Sosial-Spasial</h3>
+        <div class="meta">19 Agustus 2025 | Admin</div>
+        <p>Kunjungan tim PKM ke Kantor Desa Kalianyar jadi momentum awal dalam menjalin kerja sama penelitian sekaligus menyusun program kerja yang bermanfaat bagi masyarakat.</p>
+        <a href="detail-berita2.html">Baca Selengkapnya</a>
+      </div>
+    </div>
+
+    <div class="news-card" data-category="lingkungan">
+      <img src="../img/Sampah Ijen.jpg" alt="Berita 3">
+      <div class="content">
+        <h3>Sampah Menghantui Permukiman Kaldera Ijen: Keindahan Alam yang Terancam</h3>
+        <div class="meta">21 Agustus 2025 | Admin</div>
+        <p>Tumpukan sampah di kawasan Kaldera Ijen makin mengkhawatirkan, mencoreng panorama indah dan berpotensi menimbulkan dampak buruk bagi lingkungan maupun kesehatan warga.</p>
+        <a href="detail-berita3.html">Baca Selengkapnya</a>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Kelok Ijen. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/berita.js"></script>
+</body>
+</html>

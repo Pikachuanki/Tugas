@@ -1,0 +1,195 @@
+/* Import styling dasar dari berita.css biar seragam */
+@import url("berita.css");
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: #064635;
+  color: white;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #ffd700;
+}
+
+.search-box {
+  display: flex;
+  gap: 5px;
+}
+
+.search-box input {
+  padding: 5px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.search-box button {
+  padding: 6px 10px;
+  background: #ffd700;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Filter bar */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  background: #0a6d4d;
+  padding: 8px 0;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.filter-btn:hover {
+  color: #ffd700;
+}
+
+/* Detail Berita */
+.detail-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.article-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #064635;
+}
+
+.meta {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.article-image-wrapper {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.article-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.img-source {
+  font-size: 13px;
+  font-style: italic;
+  color: #555;
+  margin-top: 5px;
+}
+
+.article-content {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  text-align: justify;
+}
+
+.share-links a {
+  display: inline-block;
+  margin: 8px 8px 0 0;
+  padding: 6px 12px;
+  background: #064635;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.share-links a:hover {
+  background: #0a6d4d;
+}
+
+.other-articles {
+  margin-top: 10px;
+}
+
+.other-articles a {
+  color: #064635;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.other-articles a:hover {
+  color: #0a6d4d;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #064635;
+  color: white;
+  margin-top: 30px;
+}
+
+/* --- Responsive Navbar --- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* munculkan hamburger */
+  }
+
+  .navbar {
+    display: none; /* sembunyikan menu */
+    flex-direction: column;
+    background: #064635;
+    position: absolute;
+    top: 60px; /* tinggi header */
+    right: 0;
+    width: 200px;
+    padding: 10px;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .navbar.active {
+    display: flex; /* tampilkan menu saat toggle */
+  }
+
+  .search-box {
+    display: none; /* kalau mau disembunyikan di hp */
+  }
+}

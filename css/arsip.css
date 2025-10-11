@@ -1,0 +1,202 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* === NAVBAR (responsive ala profil) === */
+.navbar {
+  background: #064635;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+.navbar .logo {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.navbar ul li {
+  margin-left: 25px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  text-decoration: underline;
+}
+
+/* === ARSIP SECTION === */
+.arsip-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.arsip-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #064635;
+}
+
+.arsip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.arsip-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.arsip-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.arsip-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.arsip-card h3 {
+  margin: 10px 0;
+  font-size: 1.3rem;
+  color: #2c3e50;
+}
+
+.arsip-card p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.arsip-card .btn {
+  margin: 5px;
+}
+
+/* ===================== */
+/* MEDIA QUERIES */
+/* ===================== */
+
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .arsip-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .arsip-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .arsip-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* HP (≤768px) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+  .navbar ul {
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar ul li {
+    margin-left: 15px;
+    margin-top: 8px;
+  }
+
+  .arsip-section {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .arsip-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .arsip-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .arsip-card img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .arsip-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .arsip-card p {
+    font-size: 0.85rem;
+  }
+}
+
+/* HP kecil (≤480px) */
+@media (max-width: 480px) {
+  .navbar .logo {
+    font-size: 1.1rem;
+  }
+  .navbar ul li a {
+    font-size: 0.9rem;
+  }
+
+  .arsip-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .arsip-card {
+    padding: 15px;
+  }
+
+  .arsip-card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .arsip-card h3 {
+    font-size: 1rem;
+  }
+
+  .arsip-card p {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Kelok Ijen</title>
+  <!-- Hubungkan ke CSS eksternal -->
+  <link rel="stylesheet" href="../css/profil.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#" class="logo">Kelok Ijen</a>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="peta.html">Peta</a></li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="arsip.html">Arsip</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Foto Slider dengan Deskripsi -->
+  <div class="photo-slider">
+    <div class="photo-wrapper" id="photoWrapper">
+      <div class="photo-slide"><img src="../img/DJI_0733.JPG" alt="Kaldera Ijen 1"></div>
+      <div class="photo-slide"><img src="../img/DJI_0844.JPG" alt="Kaldera Ijen 2"></div>
+      <div class="photo-slide"><img src="../img/DJI_0907.JPG" alt="Kaldera Ijen 3"></div>
+      <div class="photo-slide"><img src="../img/DJI_0937.JPG" alt="Kaldera Ijen 4"></div>
+      <div class="photo-slide"><img src="../img/DJI_0943.JPG" alt="Kaldera Ijen 5"></div>
+    </div>
+
+    <!-- Kotak Deskripsi -->
+    <div class="description-box">
+      <h2>Deskripsi</h2>
+      <p>
+        Gunung Ijen merupakan salah satu gunung api aktif di Jawa Timur dengan potensi ancaman bencana vulkanik. 
+        Masyarakat di sekitarnya telah lama hidup berdampingan dengan risiko tersebut melalui kearifan lokal, 
+        tradisi, dan tata ruang permukiman yang diwariskan secara turun-temurun.
+      </p>
+      <p>
+        Penelitian PKM-RSH Ijen berfokus pada pemahaman hubungan antara kearifan lokal 
+        dan kerentanan sosial masyarakat di kawasan rawan bencana. Dengan pendekatan 
+        SIG, observasi lapangan, dan wawancara, penelitian ini memetakan tingkat kerentanan 
+        sosial sekaligus menggali praktik-praktik lokal yang memperkuat resiliensi komunitas.
+      </p>
+    </div>
+  </div>
+
+  <!-- Meet Our Team -->
+  <div class="container">
+    <h2>Meet Our Team 👥</h2>
+    <div class="slider">
+      <div class="team-wrapper" id="teamWrapper">
+        <div class="team-card">
+          <img src="../img/Pak Igor.png" alt="Pembimbing">
+          <h3>Igor Avizena Eris, S.GEO., M.URP.</h3>
+          <p>Dosen Pembimbing</p>
+        </div>
+        <div class="team-card">
+          <img src="../img/Hikmal1.jpg" alt="Ketua">
+          <h3>Hikmal Akbar Ibnu Sabil</h3>
+          <p>Ketua Tim</p>
+        </div>
+        <div class="team-card">
+          <img src="../img/Dian1.jpg" alt="Anggota 1">
+          <h3>Dian Aulia Salsabila</h3>
+          <p>Anggota Tim</p>
+        </div>
+        <div class="team-card">
+          <img src="../img/Satria.jpg" alt="Anggota 2">
+          <h3>Satria Budiarta</h3>
+          <p>Anggota Tim</p>
+        </div>
+        <div class="team-card">
+          <img src="../img/pute1.jpg" alt="Anggota 3">
+          <h3>Putri Indraswari</h3>
+          <p>Anggota Tim</p>
+        </div>
+      </div>
+      <button class="nav-btn prev" onclick="moveSlide(-1)">❮</button>
+      <button class="nav-btn next" onclick="moveSlide(1)">❯</button>
+    </div>
+  </div>
+
+  <!-- Hubungkan ke JS eksternal -->
+  <script src="../js/profil.js"></script>
+</body>
+</html>

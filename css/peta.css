@@ -1,0 +1,62 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; }
+
+/* Header/Navbar */
+.header {
+  background-color: #064635;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; top: 0; left: 0;
+  width: 100%; z-index: 1100;
+}
+.logo h2 { font-size: 1.5rem; color: white; }
+.navbar { flex: 1; display: flex; justify-content: center; }
+.navbar ul { list-style: none; display: flex; gap: 20px; }
+.navbar ul li a {
+  text-decoration: none; color: white; font-weight: bold;
+  transition: color 0.3s;
+}
+.navbar ul li a:hover { color: #a3d9a5; }
+
+/* Map */
+#map { height: 100vh; width: 100%; }
+
+/* Sidebar */
+#sidebar {
+  position: absolute; top: 80px; right: 10px;
+  width: 260px; max-height: 85vh; overflow-y: auto;
+  background: white; padding: 10px; border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  z-index: 1000; font-family: sans-serif; font-size: 14px; color: black;
+}
+#sidebar h3 { margin: 0 0 8px 0; font-size: 16px; }
+#sidebar label { display: block; margin: 5px 0; }
+#sidebar .section { margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid #ddd; }
+
+.search-box { display: flex; margin-bottom: 12px; }
+.search-box input {
+  flex: 1; padding: 6px 8px; border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px; outline: none;
+}
+.search-box button {
+  padding: 6px 10px; border: none; border-radius: 0 4px 4px 0;
+  background: #064635; color: white; cursor: pointer; transition: background 0.3s;
+}
+.search-box button:hover { background: #0b7a57; }
+
+table.popup-table { border-collapse: collapse; font-size: 13px; width: 100%; }
+table.popup-table td {
+  border: 1px solid #ccc; padding: 3px 6px;
+  vertical-align: top; text-align: left;
+}
+
+.popup-img { margin-bottom: 6px; max-width: 220px; border-radius: 4px; }
+
+.popup-title {
+  font-size: 16px; font-weight: bold; margin-bottom: 6px; color: #333;
+}
+.popup-label {
+  font-size: 14px; font-weight: normal; color: #333; width: 70px;
+}

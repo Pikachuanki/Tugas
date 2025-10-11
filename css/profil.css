@@ -1,0 +1,254 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* === Navbar === */
+.navbar {
+  background: #064635;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+.navbar .logo {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.navbar ul li {
+  margin-left: 25px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  text-decoration: underline;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 20px 0;
+}
+
+/* === Foto Slider === */
+.photo-slider {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.photo-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease;
+}
+
+.photo-slide {
+  min-width: 100%;
+  height: 100%;
+}
+
+.photo-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === Deskripsi Transparan === */
+.description-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.85);
+  color: #000;
+  padding: 30px;
+  max-width: 800px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.description-box h2 {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.description-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* === Team Slider === */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.team-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.team-card {
+  min-width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.team-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.team-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.3rem;
+  color: #2c3e50;
+}
+
+.team-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Nav buttons */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(6, 70, 53, 0.95);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+.nav-btn:hover {
+  background: rgba(6, 70, 53, 1);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* === RESPONSIVE === */
+
+/* Tablet (≤ 1024px) */
+@media (max-width: 1024px) {
+  .photo-slider {
+    height: 400px;
+  }
+  .description-box {
+    max-width: 90%;
+    font-size: 0.95rem;
+    padding: 20px;
+  }
+  .team-card img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* HP (≤ 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+  .navbar ul {
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar ul li {
+    margin-left: 15px;
+    margin-top: 8px;
+  }
+  .photo-slider {
+    height: 300px;
+  }
+  .description-box {
+    position: static;
+    transform: none;
+    margin: 15px;
+    max-width: 100%;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.95);
+  }
+  .description-box h2 {
+    font-size: 1.3rem;
+  }
+  .description-box p {
+    font-size: 0.9rem;
+  }
+  .team-card h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* HP kecil (≤ 480px) */
+@media (max-width: 480px) {
+  .navbar .logo {
+    font-size: 1.1rem;
+  }
+  .navbar ul li a {
+    font-size: 0.9rem;
+  }
+  .photo-slider {
+    height: 220px;
+  }
+  .team-card img {
+    width: 80px;
+    height: 80px;
+  }
+  .team-card h3 {
+    font-size: 1rem;
+  }
+  .team-card p {
+    font-size: 0.85rem;
+  }
+}
