@@ -3,21 +3,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Peta</title>
+  <title>Peta - Kelok Ijen</title>
 
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
   <!-- CSS eksternal -->
-  <link rel="stylesheet" href="../css/tes.css">
+  <link rel="stylesheet" href="../css/peta.css">
 </head>
 <body>
-
-  <!-- Header/Navbar -->
+  <!-- ======== HEADER / NAVBAR ======== -->
   <header class="header">
     <div class="logo">
       <h2>Kelok Ijen</h2>
     </div>
-    <nav class="navbar">
+
+    <!-- Tombol hamburger -->
+    <div class="hamburger" id="hamburger">☰</div>
+
+    <!-- Navigasi -->
+    <nav class="navbar" id="navbar">
       <ul>
         <li><a href="../index.html">Home</a></li>
         <li><a href="./profil.html">Profil</a></li>
@@ -29,40 +34,52 @@
     </nav>
   </header>
 
-  <!-- Sidebar -->
+  <!-- ======== SIDEBAR ======== -->
+  <button id="toggleSidebar" class="toggle-sidebar">☰ Layer</button>
+
   <div id="sidebar">
     <div class="search-box">
-       <input type="text" id="search" placeholder="Cari daerah..." />
-         <button id="btn">🔍</button>
+      <input type="text" id="search" placeholder="Cari daerah..." />
+      <button id="btn">🔍</button>
     </div>
 
     <div class="section">
       <h3>Basemap</h3>
-      <label><input type="radio" name="basemap" value="satelit" checked> Satelit</label>
+      <label><input type="radio" name="basemap" value="satelit" checked> Satelit</label><br>
       <label><input type="radio" name="basemap" value="osm"> OpenStreetMap</label>
     </div>
+
     <div class="section">
       <h3>Layer</h3>
-      <label><input type="checkbox" id="persilCheck" checked> Persil Rumah</label>
-      <label><input type="checkbox" id="krbCheck" checked> KRB</label>
-      <label><input type="checkbox" id="kearifanCheck" checked> Kearifan Lokal</label>
-      <label><input type="checkbox" id="tempatCheck"> Tempat Evakuasi</label>
-      <label><input type="checkbox" id="jalurCheck"> Jalur Evakuasi</label>
+      <label><input type="checkbox" id="persilCheck" checked> Persil Rumah</label><br>
+      <label><input type="checkbox" id="krbCheck" checked> KRB</label><br>
+      <label><input type="checkbox" id="kearifanCheck" checked> Kearifan Lokal</label><br>
+      <label><input type="checkbox" id="tempatCheck"> Tempat Evakuasi</label><br>
+      <label><input type="checkbox" id="jalurCheck"> Jalur Evakuasi</label><br>
+      <label><input type="checkbox" id="bersalinCheck"> Ruang Bersalin</label>
     </div>
   </div>
 
-  <!-- Map -->
+  <!-- ======== MAP ======== -->
   <div id="map"></div>
-
-  <!-- Kotak Pencarian -->
-  <div class="search-box">
-    <input type="text" id="search" placeholder="Cari daerah..." />
-    <button id="btn">🔍</button>
-  </div>
 
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
   <!-- JS eksternal -->
-  <script src="../js/tes.js"></script>
+  <script src="../js/peta.js"></script>
+
+  <!-- Script tambahan -->
+  <script>
+    // === Toggle Navbar (hamburger) ===
+    document.getElementById("hamburger").addEventListener("click", () => {
+      document.getElementById("navbar").classList.toggle("active");
+    });
+
+    // === Toggle Sidebar ===
+    document.getElementById("toggleSidebar").addEventListener("click", () => {
+      document.getElementById("sidebar").classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
